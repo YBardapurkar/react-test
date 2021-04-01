@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://ybardapurkar-data.herokuapp.com/",
-  "homepage": "https://myusername.github.io/guide-react-gh-pages",
+  "homepage": "https://ybardapurkar.github.io/react-test",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
