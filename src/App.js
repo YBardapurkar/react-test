@@ -40,7 +40,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://ybardapurkar-data.herokuapp.com/api/projects") // data source is an object, not an array.
+    fetch("/api/projects") // data source is an object, not an array.
       .then(res => res.json())
       .then(
         result => {
