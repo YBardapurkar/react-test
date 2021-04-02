@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import React, {Component} from 'react';
@@ -40,13 +39,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://ybardapurkar-data.herokuapp.com/api/projects", {
-      method: "GET",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    }) // data source is an object, not an array.
+    fetch("https://ybardapurkar-data.herokuapp.com/api/projects") // data source is an object, not an array.
       .then(res => {
         res.json()
       })
