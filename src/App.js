@@ -40,7 +40,14 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("/api/projects") // data source is an object, not an array.
+    fetch("/api/projects", {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      }
+    }) // data source is an object, not an array.
       .then(res => res.json())
       .then(
         result => {
