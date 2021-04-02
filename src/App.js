@@ -40,7 +40,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("/api/projects", {
+    fetch("https://ybardapurkar-data.herokuapp.com/api/projects", {
       method: "GET",
       mode: "cors",
       headers: {
@@ -48,7 +48,6 @@ class App extends Component {
       }
     }) // data source is an object, not an array.
       .then(res => {
-        res.header("Access-Control-Allow-Origin", '*'); 
         res.json()
       })
       .then(
