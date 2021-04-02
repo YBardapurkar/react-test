@@ -32,29 +32,18 @@ class App extends Component {
     return (
       <div className="App">
         {
-          JSON.stringify(this.state.projects)
+          JSON.stringify(this.state)
         }
       </div>
     );
   }
 
-  componentDidMount() {
-    fetch("https://ybardapurkar-data.herokuapp.com/api/projects") // data source is an object, not an array.
-      .then(res => {
-        res.json()
-      })
-      .then(
-        result => {
-          this.setState({
-            projects: result,
-          });
-        },
-        error => {
-          this.setState({
-            error
-          });
-        }
-      );
+  async componentDidMount() {
+    const res = await fetch(`http://ybardapurkar-data.herokuapp.com/api/projects`); // data source is an object, not an array.
+    const js = await res.json();
+    this.setState({
+      projects: js
+    });
   }
 }
 
