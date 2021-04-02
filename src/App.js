@@ -44,11 +44,13 @@ class App extends Component {
       method: "GET",
       mode: "cors",
       headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*"
+        "Content-Type": "application/json"
       }
     }) // data source is an object, not an array.
-      .then(res => res.json())
+      .then(res => {
+        res.header("Access-Control-Allow-Origin", '*'); 
+        res.json()
+      })
       .then(
         result => {
           this.setState({
