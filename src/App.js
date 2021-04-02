@@ -39,7 +39,7 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const res = await fetch(`http://ybardapurkar-data.herokuapp.com/api/projects`); // data source is an object, not an array.
+    const res = await fetch(`https://ybardapurkar-data.herokuapp.com/api/projects`); // data source is an object, not an array.
     const js = await res.json();
     this.setState({
       projects: js
